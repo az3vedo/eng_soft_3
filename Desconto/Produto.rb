@@ -1,16 +1,17 @@
 module Desconto
   class Produto
 
-    attr_accessor :valorProduto :desconto :nome
+    attr_accessor :valorProduto, :desconto, :nome
 
-    def initialize
+    def initialize(nome, valorProduto, desconto)
+      @nome = nome
       @valorProduto = valorProduto
       @desconto = desconto
-      @nome = nome
     end
 
-    def setValorFinal(CalculaDesconto)
-      #aqui ele recebe o valor final
+    def getValor
+      return valorProduto
     end
+
   end
 end

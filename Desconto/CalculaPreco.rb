@@ -1,18 +1,18 @@
 module Desconto
   class CalculaPreco
 
-    attr_accessor :calculaDesconto :produto
+    attr_accessor :calculo :produto
 
     def initialize(produto)
       @produto = produto
     end
 
-    def setDesconto
-      @calculaDesconto = calculaDesconto
+    def setDesconto(calculo)
+      @calculo = calculo
     end
 
-    def calcularPreco(produto) 
-      result = calculaDesconto.calcularPreco(produto)
+    def executar
+      return calculo.calcularDesconto
     end
   end
 end

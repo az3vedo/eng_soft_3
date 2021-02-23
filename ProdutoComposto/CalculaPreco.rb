@@ -1,16 +1,18 @@
 module ProdutoComposto
   class CalculaPreco
 
-    attr_accessor :calculaDesconto :produto
+    attr_accessor :calculo
 
-    def initialize(calculaDesconto, produto)
-      @calculaDesconto = calculaDesconto
-      @produto = produto
+    def initialize()
+      @calculo = nil
     end
 
-    def calcularPreco(produto) 
-      result = @calculaDesconto.calcularPreco(valor, tipo)
-      print result
+    def setDesconto(calculo)
+      @calculo = calculo
+    end
+
+    def executar
+      return calculo.calcularDesconto
     end
   end
 end

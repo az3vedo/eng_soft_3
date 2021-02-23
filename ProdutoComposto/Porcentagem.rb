@@ -1,15 +1,15 @@
 module ProdutoComposto
-  class Porcentagem < CalculoDesconto
+  class Porcentagem < CalculaDesconto
 
-    attr_reader :valor :tipo
+	  attr_reader :valorDesconto, :valorProduto
 
-    def initialize(valor, tipo)
-        @valor = valor
-        @tipo = tipo
-    end
+	  def initialize(produto)
+		  @porcentagemDesconto = produto.desconto.getValor/100
+			@valorProduto =  produto.getValor
+	  end
 
-    def getValor(produto)
-        return produto.valorProduto - valor
-    end
+	  def calcularDesconto
+		  return valorProduto - (valorProduto*porcentagemDesconto)
+	  end
   end
 end

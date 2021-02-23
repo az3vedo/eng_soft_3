@@ -1,15 +1,15 @@
 module ProdutoComposto
-  class Subtracao < CalculoDesconto
+  class Subtracao < CalculaDesconto
 
-    attr_reader :valor :tipo
+      attr_reader :valorDesconto, :valorProduto
 
-    def initialize(valor, tipo)
-        @valor = valor
-        @tipo = tipo
-    end
+      def initialize(produto)
+          @valorDesconto = produto.desconto.getValor
+          @valorProduto = produto.getValor
+      end
 
-    def getValor(produto)
-        return produto.valorProduto - valor
-    end
+      def calcularDesconto
+          return valorProduto - valorDesconto
+      end
   end
 end

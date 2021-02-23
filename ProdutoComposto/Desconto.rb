@@ -3,12 +3,13 @@ module ProdutoComposto
 
     attr_accessor :valor :tipo
 
-    def initialize
+    def initialize(valor, tipo)
       @valor = valor
       @tipo = tipo
     end
 
-    def getValor(CalculaDesconto) #qual valor mesmo?
+    def getValor
+      return valor
     end
   end
 end

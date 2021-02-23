@@ -1,5 +1,5 @@
 module ProdutoComposto
-  class Porcentagem < CalculoDesconto
+  class Subtracao < CalculoDesconto
 
     attr_reader :valor :tipo
 

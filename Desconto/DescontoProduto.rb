@@ -1,5 +1,5 @@
-module ProdutoComposto
-  class Desconto
+module Desconto
+  class DescontoProduto
 
     attr_accessor :valor :tipo
 

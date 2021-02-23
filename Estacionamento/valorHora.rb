@@ -1,16 +1,14 @@
 module Estacionamento
-    class ValorHora < CalculoValor
+	class ValorHora < CalculaValor
+		attr_accessor :valorHora :HORA
 
-        attr_accessor :valorHora :HORA
+		def initialize(horas, veiculo)
+			@horas = horas
+			@valor = veiculo.getValor()
+		end
 
-        def initialize(valorHora, veiculo)
-            @valorHora = 0
-            @HORA = HORA
-            @veiculo = veiculo
-        end
-
-        def valorConta(veiculo)
-            return valorHora*HORA
-        end
-    end
+		def calcular
+			return (valor*horas).round(2)
+		end
+	end
 end

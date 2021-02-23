@@ -1,15 +1,14 @@
 module Estacionamento
-    class ValorMes < CalculoValor
+	class ValorMes < CalculoValor
+		attr_accessor :valorMes :MES
 
-        attr_accessor :valorMes :MES
+		def initialize(meses, veiculo)
+			@meses = meses
+			@valor = veiculo.getValor()
+		end
 
-        def initialize(valorMes)
-            @valorMes = 0
-            @MES = MES
-        end
-
-        def valorConta(veiculo)
-            return valorMes*MES
-        end
-    end
+		def calcular
+			return (valor*meses).round(2)
+		end
+	end
 end

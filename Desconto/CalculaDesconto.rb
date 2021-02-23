@@ -1,7 +1,11 @@
 module Desconto
   class CalculaDesconto
-    def getValor(produto)
-      raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
+    def initialize(produto)
+      raise NotImplementedError
+    end
+
+    def calcularDesconto
+      raise NotImplementedError
     end
   end
 end

@@ -1,15 +1,15 @@
 module Desconto
-  class Subtracao < CalculoDesconto
+  class Subtracao < CalculaDesconto
 
-      attr_reader :valor :valorProduto
+      attr_reader :valorDesconto, :valorProduto
 
       def initialize(produto)
-          @valor = desconto.getValor
-          @valorProduto = valorProduto
+          @valorDesconto = produto.desconto.getValor
+          @valorProduto = produto.getValor
       end
 
-      def getValor(produto)
-          return produto.valorProduto - produto.desconto.getValor
+      def calcularDesconto
+          return valorProduto - valorDesconto
       end
   end
 end

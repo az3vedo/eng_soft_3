@@ -1,16 +1,14 @@
 module Estacionamento
-    class ValorDia < CalculoValor
+	class ValorDia < CalculaValor
+		attr_accessor :valorDia :DIA
 
-        attr_accessor :valorDia :DIA
+		def initialize(dias,veiculo)
+			@dias = dias
+			@valor = veiculo.getValor()
+		end
 
-        def initialize(valorDia, veiculo)
-            @valorDia = 0
-            @DIA = DIA
-            @veiculo = veiculo
-        end
-
-        def valorConta(veiculo)
-            return valorDia*DIA 
-        end
-    end
+		def calcular(valor, dias)
+			return (valor*dias).round(2)
+		end
+	end
 end

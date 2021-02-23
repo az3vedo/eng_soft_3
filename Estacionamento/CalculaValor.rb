@@ -1,6 +1,6 @@
 module Estacionamento
-  class Veiculo
-    def getValor
+  class CalculaValor
+    def calcular
       raise NotImplementedError
     end
   end
